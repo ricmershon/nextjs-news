@@ -81,4 +81,11 @@ app.get('/news', (req, res) => {
 
 initDb();
 
-app.listen(8080);
+const PORT = 8080;
+
+app.listen(PORT, (error) => {
+    if (error) {
+        console.log('Error setting up server', error)
+    }
+    console.log('Server listening on Port:', PORT)
+});
